@@ -1,0 +1,36 @@
+{
+  "name": "outriders-lfg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wetherc/outriders-lfg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wetherc/outriders-lfg/issues"
+  },
+  "homepage": "https://github.com/wetherc/outriders-lfg#readme",
+  "dependencies": {
+    "@reach/router": "^1.3.4",
+    "apollo-cache": "^1.3.5",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-http": "^1.5.17",
+    "aws-appsync-auth-link": "^3.0.4",
+    "aws-appsync-subscription-link": "^3.0.6",
+    "core-js": "^3.10.1",
+    "material-ui": "^0.20.2",
+    "react": "^17.0.2",
+    "react-apollo": "^3.1.5",
+    "react-app-polyfill": "^2.0.0",
+    "react-dom": "^17.0.2",
+    "srcdoc-polyfill": "^1.0.0"
+  }
+}
