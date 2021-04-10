@@ -1,0 +1,20 @@
+# Ignore everything
+*
+
+# But descend into directories
+!*/
+
+# And whitelist certain filetypes
+!*.py
+!*.tsx
+!*.ts
+!*.js
+!*.yaml
+!*.json
+
+# Or specific folders, regardless of filetype
+
+# And certain dotfiles
+!.gitignore
+!.arclint
+!.arcconfig
