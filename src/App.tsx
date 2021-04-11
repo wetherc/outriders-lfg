@@ -6,6 +6,11 @@ import {
   useLocation,
   globalHistory
 } from '@reach/router';
+
+import Amplify, { Auth } from 'aws-amplify';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import awsconfig from './aws-exports';
+
 import styled from 'styled-components';
 import Default, { breakpoints } from './themes/default.theme';
 import { Box } from '@material-ui/core';
@@ -13,6 +18,8 @@ import {
   LandingPage
 } from './pages';
 
+
+Amplify.configure(awsconfig);
 
 // https://stackoverflow.com/questions/53058110/stop-reach-router-scrolling-down-the-page-after-navigating-to-new-page
 const ScrollToTop = ({
@@ -51,6 +58,7 @@ const App = ({ pathLocation }: AppProps) => {
           <LandingPage path="/" />
         </Router>
       </StyledContentWrapper>
+      <AmplifySignOut />
     </Box>
   );
 };

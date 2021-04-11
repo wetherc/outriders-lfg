@@ -16,10 +16,13 @@
 
 # Or specific folders, regardless of filetype
 
-# But still exclude some generated folders
-*node_modules/
-
 # And certain dotfiles
 !.gitignore
 !.arclint
 !.arcconfig
+
+# But still exclude some generated folders
+*node_modules/
+
+# And exclude some generated files that contain secrets
+*/aws-exports.js
