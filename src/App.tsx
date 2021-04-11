@@ -6,6 +6,7 @@ import {
   useLocation,
   globalHistory
 } from '@reach/router';
+import { Container } from '@material-ui/core';
 
 
 // https://stackoverflow.com/questions/53058110/stop-reach-router-scrolling-down-the-page-after-navigating-to-new-page
@@ -27,7 +28,9 @@ interface AppProps {
 }
 
 const App = ({ pathLocation }: AppProps) => {
-  return;
+  return (
+    <></>
+  );
 };
 
 export default App;
