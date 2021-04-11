@@ -6,7 +6,12 @@ import {
   useLocation,
   globalHistory
 } from '@reach/router';
-import { Container } from '@material-ui/core';
+import styled from 'styled-components';
+import Default, { breakpoints } from './themes/default.theme';
+import { Box } from '@material-ui/core';
+import {
+  LandingPage
+} from './pages';
 
 
 // https://stackoverflow.com/questions/53058110/stop-reach-router-scrolling-down-the-page-after-navigating-to-new-page
@@ -21,6 +26,17 @@ const ScrollToTop = ({
   return <>{children}</>;
 };
 
+const xlargeBreakpoint = `${Default?.global?.breakpoints?.xlarge?.value}px`;
+const StyledContentWrapper = styled.div`
+  padding: 0 3.75rem 3.75rem;
+  margin: 2.5rem auto 0;
+  max-width: ${breakpoints.xlarge + 1}px;
+  @media (min-width: ${xlargeBreakpoint}) {
+    width: 90%;
+  }
+`;
+
+
 interface AppProps {
   pathLocation: {
     pathname: string;
@@ -29,7 +45,13 @@ interface AppProps {
 
 const App = ({ pathLocation }: AppProps) => {
   return (
-    <></>
+    <Box gridArea="main">
+      <StyledContentWrapper>
+        <Router>
+          <LandingPage path="/" />
+        </Router>
+      </StyledContentWrapper>
+    </Box>
   );
 };
 
