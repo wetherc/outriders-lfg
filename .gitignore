@@ -11,6 +11,8 @@
 !*.js
 !*.yaml
 !*.json
+!*.html
+!*.css
 
 # Or specific folders, regardless of filetype
 
