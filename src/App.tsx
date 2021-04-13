@@ -7,11 +7,11 @@ import {
   globalHistory
 } from '@reach/router';
 import {
+  LoginPage,
   LandingPage
 } from './pages';
 
 import Amplify, { Auth } from 'aws-amplify';  // eslint-disable
-import { AmplifyAuthenticator, AmplifySignUp, AmplifySignOut } from '@aws-amplify/ui-react';
 import awsconfig from './aws-exports';
 
 import styled from 'styled-components';
@@ -52,31 +52,14 @@ interface AppProps {
 
 const App = ({ pathLocation }: AppProps) => {
   return (
-    <AmplifyAuthenticator>
-      <AmplifySignUp
-        headerText="Create an Outriders LFG account"
-        formFields={[
-          { type: 'username' },
-          { type: 'email' },
-          { type: 'password' },
-          {
-            type: 'custom:gamertag',
-            label: 'Gamertag',
-            placeholder: 'Enter your gamertag for the system you play on',
-            required: false,
-          },
-        ]}
-        slot="sign-up">
-      </AmplifySignUp>
-      <Box gridArea="main">
-        <StyledContentWrapper>
-          <Router>
-            <LandingPage path="/" />
-          </Router>
-        </StyledContentWrapper>
-        <AmplifySignOut />
-      </Box>
-    </AmplifyAuthenticator>
+    <Box gridArea="main">
+      <StyledContentWrapper>
+        <Router>
+          <LoginPage path="/login" />
+          <LandingPage path="/" />
+        </Router>
+      </StyledContentWrapper>
+    </Box>
   );
 };
 
