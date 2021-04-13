@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { navigate, RouteComponentProps } from '@reach/router';
 import { Auth } from 'aws-amplify';  // eslint-disable
 import { AmplifyAuthenticator, AmplifySignUp } from '@aws-amplify/ui-react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
 
 
 const useStyles = makeStyles({

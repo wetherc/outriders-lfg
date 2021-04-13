@@ -7,6 +7,9 @@ import {
   globalHistory
 } from '@reach/router';
 import {
+  HeaderBar
+} from './components';
+import {
   LoginPage,
   LandingPage
 } from './pages';
@@ -53,6 +56,7 @@ interface AppProps {
 const App = ({ pathLocation }: AppProps) => {
   return (
     <Box gridArea="main">
+      <HeaderBar />
       <StyledContentWrapper>
         <Router>
           <LoginPage path="/login" />
